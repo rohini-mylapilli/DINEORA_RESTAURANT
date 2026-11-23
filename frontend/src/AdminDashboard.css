@@ -1,7 +1,3 @@
-/* ==========================================
-   DINEORA RESTAURANT - ADMIN DASHBOARD
-   Premium Dark Navy + Gold Theme
-========================================== */
 
 * {
   box-sizing: border-box;
@@ -15,9 +11,9 @@
   font-family: Arial, sans-serif;
 }
 
-/* ==========================================
+/* 
    SIDEBAR
-========================================== */
+ */
 
 .admin-sidebar {
   width: 260px;
@@ -95,9 +91,7 @@
   background: #49242c;
 }
 
-/* ==========================================
-   MAIN CONTENT
-========================================== */
+/*MAIN CONTENT */
 
 .admin-dashboard-main {
   flex: 1;

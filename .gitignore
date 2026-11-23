@@ -10,3 +10,5 @@ __pycache__/
 # React / Node
 node_modules/
 dist/
+# Database backups
+*.sql
