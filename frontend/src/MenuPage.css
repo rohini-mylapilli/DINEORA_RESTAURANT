@@ -1,0 +1,425 @@
+
+/* =========================================
+   DINEORA RESTAURANT - MENU PAGE
+   Premium Dark Navy & Gold Theme
+========================================= */
+
+.menu-page {
+    min-height: 100vh;
+    padding: 50px 6%;
+    background: #080d19;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* MENU HEADING */
+
+.menu-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-heading span {
+    color: #d6ad60;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.menu-heading h1 {
+    font-size: 42px;
+    margin: 12px 0;
+    color: #ffffff;
+}
+
+.menu-heading p {
+    color: #aab2c0;
+    font-size: 15px;
+}
+
+/* SEARCH AND CATEGORY CONTROLS */
+
+.menu-controls {
+    margin-bottom: 35px;
+}
+
+.menu-controls input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    padding: 14px 18px;
+    border: 1px solid #30394b;
+    border-radius: 30px;
+    outline: none;
+    background: #131c2d;
+    color: #ffffff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.menu-controls input:focus {
+    border-color: #d6ad60;
+}
+
+/* CATEGORY BUTTONS */
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.menu-categories button {
+    padding: 10px 20px;
+    border: 1px solid #39445a;
+    border-radius: 25px;
+    background: #131c2d;
+    color: #dce2ed;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-categories button:hover,
+.menu-categories button.active {
+    background: #d6ad60;
+    border-color: #d6ad60;
+    color: #101522;
+}
+
+/* FOOD GRID - DESKTOP */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* FOOD CARD */
+
+.food-card {
+    overflow: hidden;
+    border: 1px solid #263249;
+    border-radius: 16px;
+    background: #121b2b;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    border-color: #d6ad60;
+}
+
+/* FOOD IMAGE */
+
+.food-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-no-image {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #202b3e;
+    color: #9ba8bb;
+}
+
+/* FOOD DETAILS */
+
+.food-details {
+    padding: 20px;
+}
+
+.food-category {
+    color: #d6ad60;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.food-details h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.food-details p {
+    min-height: 48px;
+    color: #aab2c0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* PRICE AND CART BUTTON */
+
+.food-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.food-bottom strong {
+    color: #d6ad60;
+    font-size: 21px;
+}
+
+.food-bottom button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #d6ad60;
+    color: #111827;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.food-bottom button:hover {
+    background: #f0c979;
+}
+
+/* MESSAGES */
+
+.menu-message {
+    text-align: center;
+    padding: 40px;
+    color: #c2cad6;
+}
+
+.menu-error {
+    text-align: center;
+    padding: 20px;
+    color: #ff7777;
+}
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .menu-page {
+        padding: 40px 4%;
+    }
+
+    .menu-heading h1 {
+        font-size: 36px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE - CIRCULAR FOOD DESIGN
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .menu-page {
+        padding: 25px 12px;
+    }
+
+    /* Heading */
+
+    .menu-heading {
+        margin-bottom: 25px;
+    }
+
+    .menu-heading span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu-heading h1 {
+        font-size: 25px;
+        margin: 8px 0;
+    }
+
+    .menu-heading p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Search */
+
+    .menu-controls {
+        margin-bottom: 25px;
+    }
+
+    .menu-controls input {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    /* Horizontal Category Buttons */
+
+    .menu-categories {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .menu-categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-categories button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    /* Three Circular Items Per Row */
+
+    .menu-page .food-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px 8px;
+        width: 100%;
+    }
+
+    .menu-page .food-card {
+        width: 100%;
+        min-width: 0;
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        text-align: center;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .menu-page .food-card:hover {
+        transform: none;
+        border-color: transparent;
+    }
+
+    /* Circular Images */
+
+    .menu-page .food-image,
+    .menu-page .food-no-image {
+        width: 88px;
+        height: 88px;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d6ad60;
+        box-sizing: border-box;
+    }
+
+    .menu-page .food-no-image {
+        font-size: 9px;
+        padding: 5px;
+        overflow: hidden;
+    }
+
+    /* Food Details */
+
+    .menu-page .food-details {
+        padding: 8px 2px;
+    }
+
+    .menu-page .food-category {
+        display: none;
+    }
+
+    .menu-page .food-details h3 {
+        font-size: 12px;
+        line-height: 1.35;
+        margin: 6px 0;
+        overflow-wrap: anywhere;
+    }
+
+    .menu-page .food-details p {
+        display: none;
+    }
+
+    /* Price and Add to Cart */
+
+    .menu-page .food-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        margin-top: 7px;
+    }
+
+    .menu-page .food-bottom strong {
+        font-size: 13px;
+    }
+
+    .menu-page .food-bottom button {
+        width: 100%;
+        max-width: 95px;
+        padding: 7px 3px;
+        font-size: 9px;
+        border-radius: 20px;
+    }
+
+    /* Messages */
+
+    .menu-message {
+        padding: 25px 10px;
+        font-size: 13px;
+    }
+
+    .menu-error {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .menu-page {
+        padding: 20px 9px;
+    }
+
+    .menu-page .food-grid {
+        gap: 18px 5px;
+    }
+
+    .menu-page .food-image,
+    .menu-page .food-no-image {
+        width: 76px;
+        height: 76px;
+    }
+
+    .menu-page .food-details h3 {
+        font-size: 11px;
+    }
+
+    .menu-page .food-bottom strong {
+        font-size: 12px;
+    }
+
+    .menu-page .food-bottom button {
+        font-size: 8px;
+        padding: 7px 2px;
+    }
+}
