@@ -20,7 +20,7 @@ import OTPVerification from './OTPVerification'
 import AdminLogin from './AdminLogin'
 import AdminDashboard from './AdminDashboard'
 
-const API_URL = 'http://127.0.0.1:8000'
+const API_URL = 'https://dineora-backend-drui.onrender.com'
 
 // Paste your actual Home Page image URL here
 const HERO_IMAGE_URL = 'https://as2.ftcdn.net/v2/jpg/02/84/46/89/1000_F_284468940_1bg6BwgOfjCnE3W0wkMVMVqddJgtMynE.jpg'
