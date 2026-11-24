@@ -23,10 +23,9 @@ class OrderAdmin(admin.ModelAdmin):
         'created_at',
     )
 
-    search_fields = (
-        'customer_name',
-        'phone_number',
-    )
+    list_editable = ('order_status',)
+
+    search_fields = ('customer_name', 'phone_number')
 
     list_filter = (
         'order_status',
@@ -35,17 +34,6 @@ class OrderAdmin(admin.ModelAdmin):
     )
 
     inlines = [OrderItemInline]
-
-    fields = (
-        'customer',
-        'customer_name',
-        'phone_number',
-        'delivery_address',
-        'total_amount',
-        'payment_method',
-        'order_status',
-        'created_at',
-    )
 
     readonly_fields = (
         'customer',
@@ -56,7 +44,6 @@ class OrderAdmin(admin.ModelAdmin):
         'payment_method',
         'created_at',
     )
-
 
 @admin.register(OrderItem)
 class OrderItemAdmin(admin.ModelAdmin):
