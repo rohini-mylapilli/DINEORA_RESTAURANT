@@ -65,8 +65,8 @@ class SendOTPAPIView(APIView):
             'message': 'OTP generated successfully. Please verify your number.'
         }
 
-        if settings.DEBUG:
-            response_data['dev_otp'] = otp
+        if settings.OTP_DISPLAY_IN_RESPONSE:
+           response_data['dev_otp'] = otp
 
         return Response(response_data, status=status.HTTP_200_OK)
 

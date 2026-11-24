@@ -15,6 +15,9 @@ SECRET_KEY = os.environ.get(
 )
 
 DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
+OTP_DISPLAY_IN_RESPONSE = (
+    os.environ.get("OTP_DISPLAY_IN_RESPONSE", "False").lower() == "true"
+)
 
 ALLOWED_HOSTS = [
     host.strip()
@@ -125,7 +128,15 @@ USE_TZ = True
 # Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Media files
 MEDIA_URL = '/media/'
