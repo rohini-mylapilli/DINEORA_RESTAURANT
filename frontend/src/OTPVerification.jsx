@@ -84,7 +84,7 @@ function OTPVerification() {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/accounts/verify-otp/',
+        'https://dineora-backend-drui.onrender.com/api/accounts/verify-otp/',
         {
           method: 'POST',
           headers: {
